@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Node.js v12 (or later)
+- Node.js v14 (or later)
 - Yarn (`npm install --global yarn`)
 
 ## Setup ENV Variables
