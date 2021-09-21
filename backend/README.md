@@ -8,10 +8,10 @@
 ## Setup ENV Variables
 
 ```
-cp ./.env.example ./.env
+cp ./.env ./.env.local
 ```
 
-Edit `.env` file (DB user, password, ...)
+Edit `.env.local` file (DB user, password, ...)
 
 ## Install Dependencies
 
