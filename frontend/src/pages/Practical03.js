@@ -19,20 +19,19 @@ const QUACKS_QUERY = gql`
 export function Practical03() {
   const quacksState = useQuery(QUACKS_QUERY);
   const [selectedQuackId, setSelectedQuackId] = useState(null);
+  const { loading, refetch } = quacksState;
 
   useEffect(() => {
-    if (quacksState.loading) {
-      return;
-    }
+    if (loading) return;
 
     const timeoutId = setTimeout(() => {
-      quacksState.refetch();
+      refetch();
     }, 5000);
 
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [quacksState.loading]);
+  }, [loading, refetch]);
 
   return (
     <Practical03Template

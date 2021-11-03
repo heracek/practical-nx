@@ -11,6 +11,7 @@ import { Practical03 } from 'src/pages/Practical03';
 import { SignInPage } from 'src/pages/SignInPage';
 import { SignUpPage } from 'src/pages/SignUpPage';
 import { UserDetailPage } from 'src/pages/UserDetailPage';
+import { TodoListPage } from 'src/modules/todo-list/';
 
 export const route = {
   home: () => `/`,
@@ -25,6 +26,7 @@ export const PRACTICALS = [
   // Practical pages
   { id: '01', PageComponent: Practical01 },
   { id: '03', PageComponent: Practical03 },
+  { id: '07', PageComponent: TodoListPage },
 ];
 
 export function Routes() {
