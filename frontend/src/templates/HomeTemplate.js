@@ -1,11 +1,12 @@
 import React from 'react';
+import { gql } from '@apollo/client';
 
 import { Heading, MainSection } from 'src/atoms/';
 import { QuackForm, ReloadButton } from 'src/molecules/';
 import { QuackList, TopNavigation } from 'src/organisms/';
 
 export function HomeTemplate({
-  data,
+  quacks,
   loading,
   error,
   refetchQuacks,
@@ -20,7 +21,7 @@ export function HomeTemplate({
 
         {currentUser && <QuackForm {...quackFormState} />}
 
-        {data && (
+        {quacks && (
           <ReloadButton
             isLoading={loading}
             onClick={() => refetchQuacks()}
@@ -29,7 +30,7 @@ export function HomeTemplate({
         )}
 
         <QuackList
-          quacks={data && data.quacks}
+          quacks={quacks}
           isLoading={loading}
           error={error}
           refetch={refetchQuacks}
@@ -38,3 +39,12 @@ export function HomeTemplate({
     </>
   );
 }
+HomeTemplate.fragments = {
+  quacks: gql`
+    fragment HomeTemplate_quacks on Quack {
+      ...QuackList_quacks
+    }
+
+    ${QuackList.fragments.quacks}
+  `,
+};

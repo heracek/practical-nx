@@ -1,4 +1,5 @@
 import React from 'react';
+import { gql } from '@apollo/client';
 
 import { Button, ErrorBanner, Loading } from 'src/atoms/';
 import { Quack } from 'src/molecules/';
@@ -18,3 +19,13 @@ export function QuackList({ quacks, isLoading, error, refetch }) {
     </>
   );
 }
+QuackList.fragments = {
+  quacks: gql`
+    fragment QuackList_quacks on Quack {
+      id
+      ...Quack_quack
+    }
+
+    ${Quack.fragments.quack}
+  `,
+};

@@ -1,3 +1,4 @@
+export { CounterContextWidget } from './CounterContextWidget';
 export { Field } from './Field';
 export { FormikField } from './FormikField';
 export { LoadingButton } from './LoadingButton';

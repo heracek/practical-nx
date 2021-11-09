@@ -1,4 +1,5 @@
 import React from 'react';
+import { gql } from '@apollo/client';
 
 import {
   AvatarPhoto,
@@ -13,7 +14,7 @@ import { QuackList, TopNavigation } from 'src/organisms/';
 
 export function UserDetailTemplate({
   userName,
-  data,
+  user,
   loading,
   error,
   onReload,
@@ -27,7 +28,7 @@ export function UserDetailTemplate({
     <>
       <TopNavigation />
       <MainSection>
-        {loading && !data && <Loading />}
+        {loading && !user && <Loading />}
 
         {error && (
           <ErrorBanner title={error.message}>
@@ -37,18 +38,18 @@ export function UserDetailTemplate({
           </ErrorBanner>
         )}
 
-        {data && (
+        {user && (
           <>
             <header>
               <AvatarPhoto
-                src={data.user.profileImageUrl}
-                alt={data.user.name}
+                src={user.profileImageUrl}
+                alt={user.name}
                 size="4"
                 className="mb2"
               />
-              <Heading size="lg">{data.user.name}</Heading>
+              <Heading size="lg">{user.name}</Heading>
               <Heading size="sm" className="fw4 gray">
-                @{data.user.userName}
+                @{user.userName}
               </Heading>
             </header>
 
@@ -60,10 +61,25 @@ export function UserDetailTemplate({
               className="fr"
             />
 
-            <QuackList quacks={data.user.quacks} />
+            <QuackList quacks={user.quacks} />
           </>
         )}
       </MainSection>
     </>
   );
 }
+UserDetailTemplate.fragments = {
+  user: gql`
+    fragment UserDetailTemplate_user on User {
+      id
+      name
+      userName
+      profileImageUrl
+      quacks {
+        ...QuackList_quacks
+      }
+    }
+
+    ${QuackList.fragments.quacks}
+  `,
+};

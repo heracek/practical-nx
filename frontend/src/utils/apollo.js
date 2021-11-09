@@ -61,6 +61,7 @@ export function EnhancedApolloProvider({ children }) {
   });
 
   const client = new ApolloClient({
+    connectToDevTools: process.env.NODE_ENV === 'development',
     link: from([logoutLink, authLink, httpLink]),
     cache: new InMemoryCache(),
     defaultOptions: {

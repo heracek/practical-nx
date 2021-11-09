@@ -9,23 +9,11 @@ import { useAuth } from 'src/utils/auth';
 const USER_DETAIL_QUERY = gql`
   query UserDetail($userName: String!) {
     user(userName: $userName) {
-      id
-      name
-      userName
-      profileImageUrl
-      quacks {
-        id
-        createdAt
-        text
-        user {
-          id
-          name
-          userName
-          profileImageUrl
-        }
-      }
+      ...UserDetailTemplate_user
     }
   }
+
+  ${UserDetailTemplate.fragments.user}
 `;
 
 const QUACK_MUTATION = gql`
@@ -72,7 +60,7 @@ export function UserDetailPage() {
 
   return (
     <UserDetailTemplate
-      data={userFetcher.data}
+      user={userFetcher.data?.user}
       loading={userFetcher.loading}
       error={userFetcher.error}
       onReload={() => userFetcher.refetch()}

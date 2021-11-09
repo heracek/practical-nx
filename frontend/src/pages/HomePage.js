@@ -7,17 +7,11 @@ import { useAuth } from 'src/utils/auth';
 const QUACKS_QUERY = gql`
   query Quacks {
     quacks {
-      id
-      createdAt
-      user {
-        id
-        name
-        userName
-        profileImageUrl
-      }
-      text
+      ...HomeTemplate_quacks
     }
   }
+
+  ${HomeTemplate.fragments.quacks}
 `;
 
 const QUACK_MUTATION = gql`
@@ -59,7 +53,7 @@ export function HomePage() {
 
   return (
     <HomeTemplate
-      data={quacksState.data}
+      quacks={quacksState.data?.quacks}
       error={quacksState.error}
       loading={quacksState.loading}
       refetchQuacks={() => quacksState.refetch()}

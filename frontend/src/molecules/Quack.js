@@ -1,4 +1,5 @@
 import React from 'react';
+import { gql } from '@apollo/client';
 
 import { AvatarPhoto, Link, UserName, UserUserName } from 'src/atoms/';
 import { formatDate } from 'src/utils/date';
@@ -33,3 +34,16 @@ export function Quack({ quack }) {
     </article>
   );
 }
+Quack.fragments = {
+  quack: gql`
+    fragment Quack_quack on Quack {
+      text
+      createdAt
+      user {
+        name
+        userName
+        profileImageUrl
+      }
+    }
+  `,
+};
