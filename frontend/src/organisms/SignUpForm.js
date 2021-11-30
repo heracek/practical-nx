@@ -2,8 +2,9 @@ import React from 'react';
 import { Form, Formik } from 'formik';
 import * as yup from 'yup';
 
-import { ErrorBanner } from 'src/atoms/';
-import { FormikField, LoadingButton } from 'src/molecules/';
+import { ErrorBanner } from 'src/atoms/ErrorBanner';
+import { FormikField } from 'src/molecules/FormikField';
+import { LoadingButton } from 'src/molecules/LoadingButton';
 
 const initialValues = {
   email: '',
