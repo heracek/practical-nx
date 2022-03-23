@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 import { AvatarPhoto, Link, NavLink, Button } from 'src/atoms/';
 import { useAuth } from 'src/utils/auth';
-import { route, PRACTICALS } from 'src/Routes';
+import { route } from 'src/Routes';
 
 export function TopNavigation() {
   const { user, signout } = useAuth();
@@ -25,11 +25,6 @@ export function TopNavigation() {
         <NavLink exact to={route.home()} className="pa3">
           Home
         </NavLink>
-        {PRACTICALS.map(({ id }) => (
-          <NavLink to={route.practical(id)} className="pa3" key={id}>
-            {id}
-          </NavLink>
-        ))}
         <NavLink to={route.about()} className="pa3">
           About
         </NavLink>
@@ -44,7 +39,7 @@ export function TopNavigation() {
                 className="v-mid dib mr2"
                 src={user.profileImageUrl}
                 alt={user.userName}
-                size={2}
+                size="2"
               />{' '}
               {user.name}
             </NavLink>

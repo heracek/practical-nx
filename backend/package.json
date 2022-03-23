@@ -15,20 +15,20 @@
     "prettier": "prettier --write \"src/**/*.js\" README.md"
   },
   "dependencies": {
-    "apollo-server-core": "^3.3.0",
-    "apollo-server-express": "^3.3.0",
-    "argon2": "^0.28.2",
-    "body-parser": "^1.19.0",
+    "apollo-server-core": "^3.6.5",
+    "apollo-server-express": "^3.6.5",
+    "argon2": "^0.28.5",
+    "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "dotenv-flow": "^3.2.0",
-    "express": "^4.17.1",
-    "graphql": "^15.5.3",
+    "express": "^4.17.3",
+    "graphql": "^15.8.0",
     "jsonwebtoken": "^8.5.1",
     "mariadb": "^2.5.4"
   },
   "devDependencies": {
     "backpack-core": "^0.8.4",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "touch": "^3.1.0"
   }

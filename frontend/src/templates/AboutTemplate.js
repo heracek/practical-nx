@@ -2,7 +2,6 @@ import React from 'react';
 
 import { MainSection, Heading } from 'src/atoms/';
 import { TopNavigation } from 'src/organisms/';
-import { CounterContextWidget } from 'src/molecules/';
 
 export function AboutTemplate() {
   return (
@@ -10,7 +9,6 @@ export function AboutTemplate() {
       <TopNavigation />
       <MainSection>
         <Heading>About Quacker</Heading>
-        <CounterContextWidget />
         <p>
           Our company's mission is to collaboratively manufacture access to
           paradigms without losing sight of our original goal to interactively
@@ -38,8 +36,6 @@ export function AboutTemplate() {
           </a>
           .
         </p>
-
-        <CounterContextWidget />
       </MainSection>
     </>
   );

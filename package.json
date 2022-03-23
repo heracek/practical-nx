@@ -4,6 +4,6 @@
     "prettier": "prettier --write README.md \"{frontend,backend}/src/**/*.{js,json,css,scss}\" \"{frontend,backend}/README.md\""
   },
   "devDependencies": {
-    "prettier": "2.4.1"
+    "prettier": "2.6.0"
   }
 }

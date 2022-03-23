@@ -12,7 +12,6 @@ export { MainSection } from './MainSection';
 export { NavLink } from './NavLink';
 export { QuackText } from './QuackText';
 export { ScrollToTop } from './ScrollToTop';
-export { SelectableQuackWrapper } from './SelectableQuackWrapper';
 export { SmallButton } from './SmallButton';
 export { Spinner } from './Spinner';
 export { TextArea } from './TextArea';
