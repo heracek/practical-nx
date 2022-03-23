@@ -1,10 +1,12 @@
-import React from 'react';
 import classNames from 'classnames';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import { Link } from './Link';
+import type { LinkProps } from './Link';
 
-export function NavLink({ className, ...rest }) {
+export type NavLinkProps = LinkProps<typeof RouterNavLink>;
+
+export function NavLink({ className, ...rest }: NavLinkProps) {
   return (
     <Link
       as={RouterNavLink}

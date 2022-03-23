@@ -1,9 +1,20 @@
-import React from 'react';
+import type { HTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
-export function ErrorBanner({ className, title, children, ...props }) {
+export type ErrorBannerProps = {
+  title: string;
+  className?: string;
+  children?: ReactNode;
+} & HTMLAttributes<HTMLDivElement>;
+
+export function ErrorBanner({
+  className,
+  title,
+  children,
+  ...props
+}: ErrorBannerProps) {
   return (
     <div
       className={classNames('pa4 bg-washed-red dark-red', className)}

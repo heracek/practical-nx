@@ -1,7 +1,11 @@
-import React from 'react';
+import type { InputHTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-export function TextInput({ className, error, ...props }) {
+export type TextInputProps = {
+  error?: boolean;
+} & InputHTMLAttributes<HTMLInputElement>;
+
+export function TextInput({ className, error, ...props }: TextInputProps) {
   return (
     <input
       type="text"

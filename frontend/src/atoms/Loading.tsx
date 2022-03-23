@@ -1,8 +1,9 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
 
-export function Loading() {
+export type LoadingProps = {};
+
+export function Loading(props: LoadingProps) {
   return (
     <div className="center black-60">
       <div className="tc f4 pa4">

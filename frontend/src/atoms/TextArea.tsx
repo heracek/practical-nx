@@ -1,7 +1,9 @@
-import React from 'react';
+import type { TextareaHTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-export function TextArea({ className, ...rest }) {
+export type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
+
+export function TextArea({ className, ...rest }: TextAreaProps) {
   return (
     <textarea
       className={classNames(

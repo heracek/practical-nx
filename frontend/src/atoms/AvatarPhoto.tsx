@@ -1,7 +1,18 @@
-import React from 'react';
 import classNames from 'classnames';
 
-export function AvatarPhoto({ src, alt, size = '3', className }) {
+export interface AvatarPhotoProps {
+  src: string;
+  alt: string;
+  size?: '1' | '2' | '3' | '4' | '5';
+  className?: string;
+}
+
+export function AvatarPhoto({
+  src,
+  alt,
+  size = '3',
+  className,
+}: AvatarPhotoProps) {
   return (
     <img
       src={src}

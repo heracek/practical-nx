@@ -1,7 +1,13 @@
-import React from 'react';
+import type { ButtonHTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-export function TransparentButton({ children, className, ...rest }) {
+export type TransparentButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+export function TransparentButton({
+  children,
+  className,
+  ...rest
+}: TransparentButtonProps) {
   return (
     <button
       className={classNames(
