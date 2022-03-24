@@ -1,8 +1,16 @@
-import React from 'react';
-
 import { ErrorMessage, Label, TextInput } from 'src/atoms/';
+import type { TextInputProps } from 'src/atoms/';
 
-export function Field({ id, label, error, ...props }) {
+type FieldPropsBase = {
+  id?: string;
+  label: string;
+  error?: string | null | boolean;
+};
+
+export type FieldProps = FieldPropsBase &
+  Omit<TextInputProps, keyof FieldPropsBase>;
+
+export function Field({ id, label, error, ...props }: FieldProps) {
   return (
     <div className="measure mb2">
       <Label htmlFor={id}>{label}</Label>

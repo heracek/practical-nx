@@ -1,10 +1,22 @@
-import React from 'react';
 import { gql } from '@apollo/client';
 
 import { Button, ErrorBanner, Loading } from 'src/atoms/';
 import { Quack } from 'src/molecules/';
+import type { QuackProps } from 'src/molecules/';
 
-export function QuackList({ quacks, isLoading, error, refetch }) {
+export type QuackListProps = {
+  quacks: Array<{ id: number } & QuackProps['quack']>;
+  isLoading?: boolean;
+  error?: Error | null;
+  refetch: () => void;
+};
+
+export function QuackList({
+  quacks,
+  isLoading,
+  error,
+  refetch,
+}: QuackListProps) {
   return (
     <>
       {isLoading && !quacks && <Loading />}

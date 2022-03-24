@@ -1,8 +1,17 @@
-import React from 'react';
 import classNames from 'classnames';
 
 import { ErrorMessage, TextArea } from 'src/atoms/';
 import { LoadingButton } from 'src/molecules/';
+
+export type QuackFormProps = {
+  error?: string | null;
+  loading?: boolean;
+  text: string;
+  setText: (value: string) => void;
+  onSubmit: (value: { text: string }) => void;
+  maxLength?: number;
+  className?: string;
+};
 
 export function QuackForm({
   error,
@@ -12,7 +21,7 @@ export function QuackForm({
   onSubmit,
   maxLength = 250,
   className,
-}) {
+}: QuackFormProps) {
   const length = !text ? 0 : text.length;
   const isLengthValid = length <= maxLength;
 

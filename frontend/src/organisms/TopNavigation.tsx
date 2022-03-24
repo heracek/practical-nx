@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
@@ -7,7 +6,9 @@ import { AvatarPhoto, Link, NavLink, Button } from 'src/atoms/';
 import { useAuth } from 'src/utils/auth';
 import { route } from 'src/Routes';
 
-export function TopNavigation() {
+export type TopNavigationProps = {};
+
+export function TopNavigation(props: TopNavigationProps) {
   const { user, signout } = useAuth();
   const history = useHistory();
 

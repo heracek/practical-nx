@@ -1,11 +1,22 @@
-import React from 'react';
 import { gql } from '@apollo/client';
 
 import { AvatarPhoto, Link, UserName, UserUserName } from 'src/atoms/';
 import { formatDate } from 'src/utils/date';
 import { route } from 'src/Routes';
 
-export function Quack({ quack }) {
+export type QuackProps = {
+  quack: {
+    user: {
+      name: string;
+      userName: string;
+      profileImageUrl: string;
+    };
+    text: string;
+    createdAt: string;
+  };
+};
+
+export function Quack({ quack }: QuackProps) {
   const {
     user: { name, userName, profileImageUrl },
     text,

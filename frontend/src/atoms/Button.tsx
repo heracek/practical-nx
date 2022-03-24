@@ -1,17 +1,17 @@
 import type { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
 import classNames from 'classnames';
 
-const DEFAULT_COLOR_CLASSES = 'white bg-green hover-bg-dark-green';
-
 const COLORS = {
-  green: DEFAULT_COLOR_CLASSES,
+  green: 'white bg-green hover-bg-dark-green',
   navbar: 'f6 white bg-transparent hover-bg-white hover-black mh3 b--white-20',
   red: 'white bg-red hover-bg-dark-red',
 } as const;
 
+const DEFAULT_COLOR: keyof typeof COLORS = 'green';
+
 type ButtonPropsBase<TAsComponent extends ElementType> = {
   children: ReactNode;
-  color: keyof typeof COLORS;
+  color?: keyof typeof COLORS;
   className?: string;
   as?: TAsComponent;
   border?: boolean;
@@ -35,7 +35,7 @@ export function Button<TAsComponent extends ElementType = 'button'>({
   disabled,
   ...rest
 }: ButtonProps<TAsComponent>) {
-  const colorClasses = COLORS[color] || DEFAULT_COLOR_CLASSES;
+  const colorClasses = COLORS[color ?? DEFAULT_COLOR] ?? COLORS[DEFAULT_COLOR];
   const Component = as ?? 'button';
 
   return (

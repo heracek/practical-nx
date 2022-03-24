@@ -1,5 +1,6 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import { Form, Formik } from 'formik';
+import type { FormikConfig } from 'formik';
 import * as yup from 'yup';
 
 import { ErrorBanner } from 'src/atoms/ErrorBanner';
@@ -26,13 +27,29 @@ const schema = yup.object().shape({
   userName: yup.string().required().label('Username'),
 });
 
+export type SignUpFormValue = {
+  email: string;
+  name: string;
+  password: string;
+  passwordConfirmation: string;
+  userName: string;
+};
+
+export type SignUpFormProps = {
+  isLoading?: boolean;
+  errorMessage?: string | null;
+  className?: string;
+  onSubmit: FormikConfig<SignUpFormValue>['onSubmit'];
+  children: ReactNode;
+};
+
 export function SignUpForm({
   isLoading,
   errorMessage,
   className,
   onSubmit,
   children,
-}) {
+}: SignUpFormProps) {
   return (
     <Formik
       onSubmit={onSubmit}
@@ -47,7 +64,7 @@ export function SignUpForm({
           name="name"
           label="Name"
           type="text"
-          autoFocus="autofocus"
+          autoFocus
           autoComplete="on"
           autoCorrect="off"
           autoCapitalize="off"
