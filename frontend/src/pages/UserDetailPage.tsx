@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { gql, useMutation, useQuery } from '@apollo/client';
 
@@ -24,9 +24,11 @@ const QUACK_MUTATION = gql`
   }
 `;
 
-export function UserDetailPage() {
+export type UserDetailPageProps = {};
+
+export function UserDetailPage(props: UserDetailPageProps) {
   const { user } = useAuth();
-  const { userName } = useParams();
+  const { userName } = useParams<{ userName: string }>();
 
   const userFetcher = useQuery(USER_DETAIL_QUERY, {
     variables: { userName },
@@ -49,8 +51,8 @@ export function UserDetailPage() {
     error: quackMutationRequestState.error,
     text: quackFormText,
     setText: setQuackFormText,
-    onSubmit: ({ text }) => {
-      quackMutationRequest({ variables: { text, userId: user.id } });
+    onSubmit: ({ text }: { text: string }) => {
+      quackMutationRequest({ variables: { text, userId: user?.id } });
     },
   };
 

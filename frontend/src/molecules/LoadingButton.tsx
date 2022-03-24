@@ -1,5 +1,3 @@
-import type { ElementType } from 'react';
-
 import { Button, Spinner } from 'src/atoms/';
 import type { ButtonProps } from 'src/atoms/';
 

@@ -1,10 +1,19 @@
-import React from 'react';
-
 import { Heading, Link, MainSection } from 'src/atoms/';
 import { SignUpForm, TopNavigation } from 'src/organisms/';
+import type { SignUpFormProps } from 'src/organisms/';
 import { route } from 'src/Routes';
 
-export function SignUpTemplate({ isLoading, error, onSubmit }) {
+export type SignUpTemplateProps = {
+  isLoading?: boolean;
+  error?: Error | null;
+  onSubmit: SignUpFormProps['onSubmit'];
+};
+
+export function SignUpTemplate({
+  isLoading,
+  error,
+  onSubmit,
+}: SignUpTemplateProps) {
   return (
     <>
       <TopNavigation />

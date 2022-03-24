@@ -1,10 +1,19 @@
-import React from 'react';
-
 import { Heading, Link, MainSection } from 'src/atoms/';
 import { SignInForm, TopNavigation } from 'src/organisms/';
+import type { SignInFormProps } from 'src/organisms/';
 import { route } from 'src/Routes';
 
-export function SignInTemplate({ isLoading, error, onSubmit }) {
+export type SignInTemplateProps = {
+  isLoading?: boolean;
+  error?: Error | null;
+  onSubmit: SignInFormProps['onSubmit'];
+};
+
+export function SignInTemplate({
+  isLoading,
+  error,
+  onSubmit,
+}: SignInTemplateProps) {
   return (
     <>
       <TopNavigation />

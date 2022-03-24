@@ -1,7 +1,7 @@
-import React from 'react';
-
 import { AboutTemplate } from 'src/templates/AboutTemplate';
 
-export function AboutPage() {
+export type AboutPageProps = {};
+
+export function AboutPage(props: AboutPageProps) {
   return <AboutTemplate />;
 }

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import { gql, useMutation } from '@apollo/client';
 
@@ -29,7 +29,9 @@ const SIGNUP_MUTATION = gql`
   }
 `;
 
-export function SignUpPage() {
+export type SignUpPageProps = {};
+
+export function SignUpPage(props: SignUpPageProps) {
   const auth = useAuth();
   const history = useHistory();
   const [signupRequest, signupRequestState] = useMutation(SIGNUP_MUTATION, {

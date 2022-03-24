@@ -1,9 +1,13 @@
-import React from 'react';
-
+import type { ReactNode } from 'react';
 import { Heading, MainSection } from 'src/atoms/';
 import { TopNavigation } from 'src/organisms/';
 
-export function Placeholder({ title, children }) {
+export type PlaceholderProps = {
+  title: string;
+  children: ReactNode;
+};
+
+export function Placeholder({ title, children }: PlaceholderProps) {
   return (
     <>
       <TopNavigation />

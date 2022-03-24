@@ -1,4 +1,3 @@
-import React from 'react';
 import { gql } from '@apollo/client';
 
 import {
@@ -10,7 +9,26 @@ import {
   MainSection,
 } from 'src/atoms/';
 import { QuackForm, ReloadButton } from 'src/molecules/';
+import type { QuackFormProps } from 'src/molecules/';
 import { QuackList, TopNavigation } from 'src/organisms/';
+import type { QuackListProps } from 'src/organisms/';
+
+export type UserDetailTemplateProps = {
+  userName: string;
+  user: {
+    profileImageUrl: string;
+    name: string;
+    userName: string;
+    quacks: QuackListProps['quacks'];
+  };
+  loading?: boolean;
+  error?: Error | null;
+  onReload: () => {};
+  quackFormState: QuackFormProps;
+  currentUser: {
+    userName: string;
+  } | null;
+};
 
 export function UserDetailTemplate({
   userName,
@@ -20,7 +38,7 @@ export function UserDetailTemplate({
   onReload,
   quackFormState,
   currentUser,
-}) {
+}: UserDetailTemplateProps) {
   const showQuackForm =
     quackFormState && currentUser && currentUser.userName === userName;
 
@@ -61,7 +79,7 @@ export function UserDetailTemplate({
               className="fr"
             />
 
-            <QuackList quacks={user.quacks} />
+            <QuackList quacks={user.quacks} refetch={onReload} />
           </>
         )}
       </MainSection>

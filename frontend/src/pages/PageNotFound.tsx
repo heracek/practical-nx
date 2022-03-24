@@ -1,10 +1,10 @@
-import React from 'react';
-
 import { Link } from 'src/atoms/';
 import { Placeholder } from 'src/templates/Placeholder';
 import { route } from 'src/Routes';
 
-export function PageNotFound() {
+export type PageNotFoundProps = {};
+
+export function PageNotFound(props: PageNotFoundProps) {
   return (
     <Placeholder title="Error 404">
       <p>

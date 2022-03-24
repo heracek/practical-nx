@@ -1,14 +1,27 @@
-import React, {
+import {
   createContext,
   useCallback,
   useContext,
   useMemo,
   useState,
 } from 'react';
+import type { ReactNode } from 'react';
 
 const LOCAL_STORAGE_AUTH_KEY = 'quacker-auth';
 
-const initialState = {
+export type AuthUser = {
+  id: number;
+  userName: string;
+  name: string;
+  profileImageUrl: string;
+};
+
+export type PersistedState = {
+  token: string | null;
+  user: AuthUser | null;
+};
+
+const initialState: PersistedState = {
   token: null,
   user: null,
 };
@@ -26,7 +39,11 @@ export function useAuth() {
   return useContext(AuthContext);
 }
 
-export function AuthProvider({ children }) {
+export type AuthProviderProps = {
+  children: ReactNode;
+};
+
+export function AuthProvider({ children }: AuthProviderProps) {
   const [state, setState] = usePersistedAuth(initialState);
 
   const contextValue = useMemo(() => {
@@ -39,16 +56,25 @@ export function AuthProvider({ children }) {
   );
 }
 
-function createContextValue({ token, user, setState }) {
+function createContextValue({
+  token,
+  user,
+  setState,
+}: {
+  token: string | null;
+  user: AuthUser | null;
+  setState: (value: { token: string | null; user: AuthUser | null }) => void;
+}) {
   return {
     token,
     user,
-    signin: ({ token, user }) => setState({ token, user }),
+    signin: ({ token, user }: { token: string; user: AuthUser }) =>
+      setState({ token, user }),
     signout: () => setState({ token: null, user: null }),
   };
 }
 
-function usePersistedAuth(defaultState) {
+function usePersistedAuth(defaultState: PersistedState) {
   const [state, setStateRaw] = useState(() => getStorageState(defaultState));
 
   const setState = useCallback((newState) => {
@@ -56,10 +82,10 @@ function usePersistedAuth(defaultState) {
     setStorageState(newState);
   }, []);
 
-  return [state, setState];
+  return [state, setState] as const;
 }
 
-function getStorageState(defaultState) {
+function getStorageState(defaultState: PersistedState): PersistedState {
   if (!window.localStorage) {
     return defaultState;
   }
@@ -80,7 +106,7 @@ function getStorageState(defaultState) {
   return defaultState;
 }
 
-function setStorageState(newState) {
+function setStorageState(newState: PersistedState) {
   if (!window.localStorage) {
     return;
   }

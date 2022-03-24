@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import { AboutPage } from 'src/pages/AboutPage';
@@ -13,7 +12,7 @@ export const route = {
   about: () => `/about`,
   signIn: () => `/auth/signin`,
   signUp: () => `/auth/signup`,
-  userDetail: (userName) => `/${userName}`,
+  userDetail: (userName: string) => `/${userName}`,
 };
 
 export function Routes() {

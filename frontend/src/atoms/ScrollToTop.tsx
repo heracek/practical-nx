@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export type ScrollToTopProps = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export function ScrollToTop({ children }: ScrollToTopProps) {
@@ -16,5 +16,5 @@ export function ScrollToTop({ children }: ScrollToTopProps) {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  return children || null;
+  return children ? <>{children}</> : null;
 }

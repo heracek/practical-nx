@@ -1,9 +1,9 @@
-import React from 'react';
-
-import { MainSection, Heading } from 'src/atoms/';
+import { Heading, MainSection } from 'src/atoms/';
 import { TopNavigation } from 'src/organisms/';
 
-export function AboutTemplate() {
+export type AboutTemplateProps = {};
+
+export function AboutTemplate(props: AboutTemplateProps) {
   return (
     <>
       <TopNavigation />

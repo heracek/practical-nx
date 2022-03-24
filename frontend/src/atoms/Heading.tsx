@@ -10,7 +10,7 @@ const HEADING_SIZES = {
 } as const;
 
 export type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
-  size: keyof typeof HEADING_SIZES;
+  size?: keyof typeof HEADING_SIZES;
 };
 
 export function Heading({

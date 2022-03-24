@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useMutation, useQuery, gql } from '@apollo/client';
 
 import { HomeTemplate } from 'src/templates/HomeTemplate';
@@ -22,7 +22,9 @@ const QUACK_MUTATION = gql`
   }
 `;
 
-export function HomePage() {
+export type HomePageProps = {};
+
+export function HomePage(props: HomePageProps) {
   const { user } = useAuth();
 
   const quacksState = useQuery(QUACKS_QUERY);
@@ -39,8 +41,8 @@ export function HomePage() {
     },
   );
 
-  const submitQuack = ({ text }) => {
-    quackMutationRequest({ variables: { text, userId: user.id } });
+  const submitQuack = ({ text }: { text: string }) => {
+    quackMutationRequest({ variables: { text, userId: user?.id } });
   };
 
   const quackFormState = {

@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
+import type { ReactNode } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
   ApolloClient,
@@ -9,6 +10,7 @@ import {
   from,
 } from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
+import type { GraphQLError } from 'graphql';
 
 import { useAuth } from 'src/utils/auth';
 import { config } from 'src/config';
@@ -16,22 +18,28 @@ import { route } from 'src/Routes';
 
 const UNAUTHENTICATED_CODE = 'UNAUTHENTICATED';
 
-const hasUnauthenticatedErrorCode = (errors) => {
+const hasUnauthenticatedErrorCode = (errors?: ReadonlyArray<GraphQLError>) => {
   return (
     errors &&
-    errors.some((error) => error.extensions.code === UNAUTHENTICATED_CODE)
+    errors.some((error) => error.extensions?.code === UNAUTHENTICATED_CODE)
   );
 };
 
-const hasNetworkStatusCode = (error, code) => {
-  return error && error.statusCode === code;
+const hasNetworkStatusCode = (error: any | undefined, code: number) => {
+  return error && error?.statusCode === code;
 };
 
 const httpLink = createHttpLink({
   uri: config.GRAPHQL_API,
 });
 
-export function EnhancedApolloProvider({ children }) {
+export type EnhancedApolloProviderProps = {
+  children: ReactNode;
+};
+
+export function EnhancedApolloProvider({
+  children,
+}: EnhancedApolloProviderProps) {
   const history = useHistory();
   const { token, signout } = useAuth();
 
@@ -70,7 +78,7 @@ export function EnhancedApolloProvider({ children }) {
       },
       query: {
         notifyOnNetworkStatusChange: true,
-        fetchPolicy: 'cache-and-network',
+        fetchPolicy: 'cache-first',
       },
     },
   });

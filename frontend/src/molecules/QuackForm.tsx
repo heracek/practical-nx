@@ -4,7 +4,7 @@ import { ErrorMessage, TextArea } from 'src/atoms/';
 import { LoadingButton } from 'src/molecules/';
 
 export type QuackFormProps = {
-  error?: string | null;
+  error?: Error | null;
   loading?: boolean;
   text: string;
   setText: (value: string) => void;
