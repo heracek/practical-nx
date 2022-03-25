@@ -8,8 +8,8 @@ const getUser = async (auth) => {
         const { id } = verifyToken(token);
         return id;
       } catch (error) {
-        console.log('err', err);
-        throw err;
+        console.log('err', error);
+        throw error;
       }
     }
   }

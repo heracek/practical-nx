@@ -1,12 +1,19 @@
 import { createToken } from '../libs/token';
 import { users, quacks } from './mocks';
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 const MOCK_DATA_DELAY = 300;
 const QUACKS_LIMIT = 20;
 const QUACK_TEXT_LIMIT = 250;
 
-function getAuthUser(dbUser) {
+type AuthUser = {
+  id: number;
+  name: string;
+  userName: string;
+  profileImageUrl: string | null;
+};
+
+function getAuthUser(dbUser: AuthUser): AuthUser {
   return {
     id: dbUser.id,
     name: dbUser.name,
