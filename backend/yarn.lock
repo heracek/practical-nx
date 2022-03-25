@@ -1133,9 +1133,9 @@
   integrity sha512-1rkryxURpr6aWP7R786/UQOkJ3PcpQiWkAXBmdWc7ryFWqN6a4xfK7BtjXvFBKO9LjQ+MWQSWxYeZX1OApnArA==
 
 "@types/json-schema@^7.0.5":
-  version "7.0.10"
-  resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.10.tgz#9b05b7896166cd00e9cbd59864853abf65d9ac23"
-  integrity sha512-BLO9bBq59vW3fxCpD4o0N4U+DXsvwvIcl+jofw0frQo/GrBFC+/jRZj1E7kgp6dvTyNmA4y6JCV5Id/r3mNP5A==
+  version "7.0.11"
+  resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.11.tgz#d421b6c527a3037f7c84433fd2c4229e016863d3"
+  integrity sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==
 
 "@types/long@^4.0.0":
   version "4.0.1"
@@ -1461,10 +1461,10 @@ apollo-server-caching@^3.3.0:
   dependencies:
     lru-cache "^6.0.0"
 
-apollo-server-core@^3.6.5:
-  version "3.6.5"
-  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-3.6.5.tgz#f8a30bab49d7ccbd9500b85968accae0d8631927"
-  integrity sha512-9lOTHnJnPV4TiVwt4DMl3HDWGebHxoJIU2tonOuIkRxOUjwCjsDsHfkIrPA3vutmXIb7R3OPxh/mofdDpm7DjQ==
+apollo-server-core@^3.6.6:
+  version "3.6.6"
+  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-3.6.6.tgz#3913af81442ecfd5998b41ea1f08253af6d7eb3d"
+  integrity sha512-JKxUY4JZVhCKJeEACZRB/uCXFrOZN6p0fqe1NmFc4GDeYnejDirzzuWLMY1rAgI1N5tXhZniyHDR6nU0SpPbRA==
   dependencies:
     "@apollographql/apollo-tools" "^0.5.1"
     "@apollographql/graphql-playground-html" "1.6.29"
@@ -1499,10 +1499,10 @@ apollo-server-errors@^3.3.1:
   resolved "https://registry.yarnpkg.com/apollo-server-errors/-/apollo-server-errors-3.3.1.tgz#ba5c00cdaa33d4cbd09779f8cb6f47475d1cd655"
   integrity sha512-xnZJ5QWs6FixHICXHxUfm+ZWqqxrNuPlQ+kj5m6RtEgIpekOPssH/SD9gf2B4HuWV0QozorrygwZnux8POvyPA==
 
-apollo-server-express@^3.6.5:
-  version "3.6.5"
-  resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-3.6.5.tgz#e623ee6f2e2d4cc2b4075baf7624a899a21ec1a6"
-  integrity sha512-mV1Dif//BUq1WFlCWfaSlhsuxhcJ/gGD8HdQ6/s3JEspStS7SgmeSUIwJYl3vw8IA/8j7GNg/EINkc57x2UbdA==
+apollo-server-express@^3.6.6:
+  version "3.6.6"
+  resolved "https://registry.yarnpkg.com/apollo-server-express/-/apollo-server-express-3.6.6.tgz#c644a7d24fcc201d2066651d639219671386705e"
+  integrity sha512-27D+rRd/yfIFx333yYc6WgAhI6hCPbM3r53Ha0SFCGZ7BGvccVvKlhlbLYdkLEO0DQEdVKI7YuZq4yoM0qdZ/g==
   dependencies:
     "@types/accepts" "^1.3.5"
     "@types/body-parser" "1.19.2"
@@ -1510,7 +1510,7 @@ apollo-server-express@^3.6.5:
     "@types/express" "4.17.13"
     "@types/express-serve-static-core" "4.17.28"
     accepts "^1.3.5"
-    apollo-server-core "^3.6.5"
+    apollo-server-core "^3.6.6"
     apollo-server-types "^3.5.2"
     body-parser "^1.19.0"
     cors "^2.8.5"
@@ -2011,9 +2011,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001317:
-  version "1.0.30001319"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001319.tgz#eb4da4eb3ecdd409f7ba1907820061d56096e88f"
-  integrity sha512-xjlIAFHucBRSMUo1kb5D4LYgcN1M45qdKP++lhqowDpwJwGkpIRTt5qQqnhxjj1vHcI7nrJxWhCC1ATrCEBTcw==
+  version "1.0.30001320"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001320.tgz#8397391bec389b8ccce328636499b7284ee13285"
+  integrity sha512-MWPzG54AGdo3nWx7zHZTefseM5Y1ccM7hlQKHRqJkPozUaw3hNbBTMmLn16GG2FUzjR13Cr3NPfhIieX5PzXDA==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -2583,9 +2583,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.4.84:
-  version "1.4.90"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.90.tgz#4a518590f118828d54fff045728f547fef08143f"
-  integrity sha512-ZwKgSA0mQMyEhz+NR0F8dRzkrCLeHLzLkjx/CWf16+zV85hQ6meXPQbKanvhnpkYb7b2uJNj+enQJ/N877ND4Q==
+  version "1.4.93"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.93.tgz#2e87ac28721cb31d472ec2bd04f7daf9f2e13de2"
+  integrity sha512-ywq9Pc5Gwwpv7NG767CtoU8xF3aAUQJjH9//Wy3MBCg4w5JSLbJUq2L8IsCdzPMjvSgxuue9WcVaTOyyxCL0aQ==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -4739,6 +4739,11 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
+prettier@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.1.tgz#d472797e0d7461605c1609808e27b80c0f9cfe17"
+  integrity sha512-8UVbTBYGwN37Bs9LERmxCPjdvPxlEowx2urIL6urHzdb3SDq4B/Z6xLFCblrSnE4iKWcS6ziJ3aOYrc1kz/E2A==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
