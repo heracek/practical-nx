@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "express": "4.17.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "regenerator-runtime": "0.13.7",
@@ -28,6 +29,7 @@
     "@nrwl/workspace": "13.9.5",
     "@testing-library/react": "12.1.4",
     "@testing-library/react-hooks": "7.0.2",
+    "@types/express": "4.17.13",
     "@types/jest": "27.0.2",
     "@types/node": "16.11.7",
     "@types/react": "17.0.40",

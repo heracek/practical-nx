@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "quacker-backend": "apps/quacker-backend",
     "quacker-frontend": "apps/quacker-frontend",
     "quacker-frontend-e2e": "apps/quacker-frontend-e2e"
   }
