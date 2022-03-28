@@ -1,14 +1,19 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './App.module.css';
-import NxWelcome from './nx-welcome';
+import { BrowserRouter } from 'react-router-dom';
+
+import { ScrollToTop } from 'src/atoms/';
+import { AuthProvider } from 'src/utils/auth';
+import { EnhancedApolloProvider } from 'src/utils/apollo';
+import { Routes } from 'src/Routes';
 
 export function App() {
   return (
-    <>
-      <NxWelcome title="quacker-frontend" />
-      <div />
-    </>
+    <BrowserRouter>
+      <AuthProvider>
+        <EnhancedApolloProvider>
+          <ScrollToTop />
+          <Routes />
+        </EnhancedApolloProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
-
-export default App;
