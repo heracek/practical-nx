@@ -23,7 +23,7 @@ export type UserDetailTemplateProps = {
   };
   loading?: boolean;
   error?: Error | null;
-  onReload: () => {};
+  onReload: () => void;
   quackFormState: QuackFormProps;
   currentUser: {
     userName: string;

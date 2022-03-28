@@ -101,7 +101,9 @@ function getStorageState(defaultState: PersistedState): PersistedState {
     if (token && user && user.userName && user.id && user.name) {
       return { token, user };
     }
-  } catch {}
+  } catch {
+    // ignore
+  }
 
   return defaultState;
 }

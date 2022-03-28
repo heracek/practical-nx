@@ -6,7 +6,7 @@ import { AvatarPhoto, Link, NavLink, Button } from 'src/atoms/';
 import { useAuth } from 'src/utils/auth';
 import { route } from 'src/Routes';
 
-export type TopNavigationProps = {};
+export type TopNavigationProps = Record<string, never>;
 
 export function TopNavigation(props: TopNavigationProps) {
   const { user, signout } = useAuth();

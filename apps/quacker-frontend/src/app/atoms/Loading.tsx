@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
 
-export type LoadingProps = {};
+export type LoadingProps = Record<string, never>;
 
 export function Loading(props: LoadingProps) {
   return (

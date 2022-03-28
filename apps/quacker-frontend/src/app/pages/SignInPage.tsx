@@ -19,7 +19,7 @@ const SIGNIN_MUTATION = gql`
   }
 `;
 
-export type SignInPageProps = {};
+export type SignInPageProps = Record<string, never>;
 
 export function SignInPage(props: SignInPageProps) {
   const auth = useAuth();

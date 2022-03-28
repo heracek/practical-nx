@@ -2,7 +2,7 @@ import { Link } from 'src/atoms/';
 import { Placeholder } from 'src/templates/Placeholder';
 import { route } from 'src/Routes';
 
-export type PageNotFoundProps = {};
+export type PageNotFoundProps = Record<string, never>;
 
 export function PageNotFound(props: PageNotFoundProps) {
   return (

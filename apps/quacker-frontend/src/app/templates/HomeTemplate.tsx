@@ -12,7 +12,7 @@ export type HomeTemplateProps = {
   error?: Error | null;
   refetchQuacks: () => void;
   quackFormState: QuackFormProps;
-  currentUser: {} | null;
+  currentUser: { id: number } | null;
 };
 
 export function HomeTemplate({

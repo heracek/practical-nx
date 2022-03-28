@@ -1,7 +1,7 @@
 import { Heading, MainSection } from 'src/atoms/';
 import { TopNavigation } from 'src/organisms/';
 
-export type AboutTemplateProps = {};
+export type AboutTemplateProps = Record<string, never>;
 
 export function AboutTemplate(props: AboutTemplateProps) {
   return (

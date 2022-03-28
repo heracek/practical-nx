@@ -29,7 +29,7 @@ const SIGNUP_MUTATION = gql`
   }
 `;
 
-export type SignUpPageProps = {};
+export type SignUpPageProps = Record<string, never>;
 
 export function SignUpPage(props: SignUpPageProps) {
   const auth = useAuth();

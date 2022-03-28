@@ -22,7 +22,7 @@ const QUACK_MUTATION = gql`
   }
 `;
 
-export type HomePageProps = {};
+export type HomePageProps = Record<string, never>;
 
 export function HomePage(props: HomePageProps) {
   const { user } = useAuth();

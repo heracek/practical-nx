@@ -24,7 +24,7 @@ const QUACK_MUTATION = gql`
   }
 `;
 
-export type UserDetailPageProps = {};
+export type UserDetailPageProps = Record<string, never>;
 
 export function UserDetailPage(props: UserDetailPageProps) {
   const { user } = useAuth();
