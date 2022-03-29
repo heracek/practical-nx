@@ -3,8 +3,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { ScrollToTop } from '@quacker/ui';
 
 import { AuthProvider } from '@quacker/auth/context-ui';
-import { EnhancedApolloProvider } from 'src/utils/apollo';
 
+import { EnhancedApolloProvider } from './utils/apollo';
 import { Routes } from './Routes';
 
 export function App() {

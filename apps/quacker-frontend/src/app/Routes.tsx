@@ -3,9 +3,9 @@ import { Route, Switch } from 'react-router-dom';
 import { route } from '@quacker/navigation/utility';
 import { PageNotFound } from '@quacker/navigation/ui';
 import { SignInPage, SignUpPage } from '@quacker/auth/feature';
-
-import { AboutPage } from 'src/pages/AboutPage';
 import { HomePage, UserDetailPage } from '@quacker/quack/feature';
+
+import { AboutPage } from './pages/AboutPage';
 
 export function Routes() {
   return (

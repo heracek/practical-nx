@@ -1,4 +1,4 @@
-import { AboutTemplate } from 'src/templates/AboutTemplate';
+import { AboutTemplate } from '../templates/AboutTemplate';
 
 export type AboutPageProps = Record<string, never>;
 

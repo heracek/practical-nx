@@ -22,8 +22,7 @@
       "@quacker/navigation/utility": ["libs/navigation/utility/src/index.ts"],
       "@quacker/quack/feature": ["libs/quack/feature/src/index.ts"],
       "@quacker/quack/ui": ["libs/quack/ui/src/index.ts"],
-      "@quacker/ui": ["libs/shared/design-system/ui/src/index.ts"],
-      "src/*": ["apps/quacker-frontend/src/app/*"]
+      "@quacker/ui": ["libs/shared/design-system/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

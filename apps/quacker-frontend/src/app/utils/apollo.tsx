@@ -13,8 +13,9 @@ import { onError } from '@apollo/client/link/error';
 import type { GraphQLError } from 'graphql';
 
 import { useAuth } from '@quacker/auth/context-ui';
-import { config } from 'src/config';
 import { route } from '@quacker/navigation/utility';
+
+import { config } from '../config';
 
 const UNAUTHENTICATED_CODE = 'UNAUTHENTICATED';
 
