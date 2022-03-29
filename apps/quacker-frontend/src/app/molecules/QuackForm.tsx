@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 
-import { ErrorMessage, TextArea } from '@quacker/ui';
-import { LoadingButton } from 'src/molecules/';
+import { ErrorMessage, TextArea, LoadingButton } from '@quacker/ui';
 
 export type QuackFormProps = {
   error?: Error | null;
