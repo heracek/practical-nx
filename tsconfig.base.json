@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "src/*": ["apps/quacker-frontend/src/app/*"],
+      "@quacker/ui": ["libs/shared/design-system/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
