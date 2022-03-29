@@ -1,6 +1,6 @@
 import { Link } from '@quacker/ui';
 import { Placeholder } from 'src/templates/Placeholder';
-import { route } from 'src/Routes';
+import { route } from '@quacker/navigation/utility';
 
 export type PageNotFoundProps = Record<string, never>;
 

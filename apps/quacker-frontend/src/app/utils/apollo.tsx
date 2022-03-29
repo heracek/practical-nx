@@ -14,7 +14,7 @@ import type { GraphQLError } from 'graphql';
 
 import { useAuth } from 'src/utils/auth';
 import { config } from 'src/config';
-import { route } from 'src/Routes';
+import { route } from '@quacker/navigation/utility';
 
 const UNAUTHENTICATED_CODE = 'UNAUTHENTICATED';
 

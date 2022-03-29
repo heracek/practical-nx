@@ -1,9 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
 
 import { ScrollToTop } from '@quacker/ui';
+
 import { AuthProvider } from 'src/utils/auth';
 import { EnhancedApolloProvider } from 'src/utils/apollo';
-import { Routes } from 'src/Routes';
+
+import { Routes } from './Routes';
 
 export function App() {
   return (
