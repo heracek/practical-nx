@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 import { Button, ErrorBanner, Loading } from '@quacker/ui';
-import { Quack } from 'src/molecules/';
-import type { QuackProps } from 'src/molecules/';
+import { Quack } from '../molecules/';
+import type { QuackProps } from '../molecules/';
 
 export type QuackListProps = {
   quacks: Array<{ id: number } & QuackProps['quack']>;

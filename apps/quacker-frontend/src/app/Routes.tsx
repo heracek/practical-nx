@@ -5,8 +5,7 @@ import { PageNotFound } from '@quacker/navigation/ui';
 import { SignInPage, SignUpPage } from '@quacker/auth/feature';
 
 import { AboutPage } from 'src/pages/AboutPage';
-import { HomePage } from 'src/pages/HomePage';
-import { UserDetailPage } from 'src/pages/UserDetailPage';
+import { HomePage, UserDetailPage } from '@quacker/quack/feature';
 
 export function Routes() {
   return (

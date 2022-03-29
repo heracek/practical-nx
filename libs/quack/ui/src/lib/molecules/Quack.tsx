@@ -1,8 +1,9 @@
 import { gql } from '@apollo/client';
 
 import { AvatarPhoto, Link, UserName, UserUserName } from '@quacker/ui';
-import { formatDate } from 'src/utils/date';
 import { route } from '@quacker/navigation/utility';
+
+import { formatDate } from '../utils/date';
 
 export type QuackProps = {
   quack: {

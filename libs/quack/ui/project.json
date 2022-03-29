@@ -1,0 +1,23 @@
+{
+  "root": "libs/quack/ui",
+  "sourceRoot": "libs/quack/ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/quack/ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/quack/ui"],
+      "options": {
+        "jestConfig": "libs/quack/ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

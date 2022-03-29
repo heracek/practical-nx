@@ -5,7 +5,7 @@ import { gql, useMutation, useQuery } from '@apollo/client';
 import { PageNotFound } from '@quacker/navigation/ui';
 import { useAuth } from '@quacker/auth/context-ui';
 
-import { UserDetailTemplate } from 'src/templates/UserDetailTemplate';
+import { UserDetailTemplate } from '@quacker/quack/ui';
 
 const USER_DETAIL_QUERY = gql`
   query UserDetail($userName: String!) {

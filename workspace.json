@@ -6,6 +6,8 @@
     "auth-ui": "libs/auth/ui",
     "navigation-ui": "libs/navigation/ui",
     "navigation-utility": "libs/navigation/utility",
+    "quack-feature": "libs/quack/feature",
+    "quack-ui": "libs/quack/ui",
     "quacker-backend": "apps/quacker-backend",
     "quacker-frontend": "apps/quacker-frontend",
     "quacker-frontend-e2e": "apps/quacker-frontend-e2e",

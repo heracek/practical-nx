@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useMutation, useQuery, gql } from '@apollo/client';
 
-import { HomeTemplate } from 'src/templates/HomeTemplate';
+import { HomeTemplate } from '@quacker/quack/ui';
 import { useAuth } from '@quacker/auth/context-ui';
 
 const QUACKS_QUERY = gql`
