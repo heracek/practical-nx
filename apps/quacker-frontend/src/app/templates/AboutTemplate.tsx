@@ -1,5 +1,5 @@
 import { Heading, MainSection } from '@quacker/ui';
-import { TopNavigation } from 'src/organisms/';
+import { TopNavigation } from '@quacker/navigation/ui';
 
 export type AboutTemplateProps = Record<string, never>;
 

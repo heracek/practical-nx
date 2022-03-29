@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Heading, MainSection } from '@quacker/ui';
-import { TopNavigation } from 'src/organisms/';
+import { TopNavigation } from '@quacker/navigation/ui';
 
 export type PlaceholderProps = {
   title: string;

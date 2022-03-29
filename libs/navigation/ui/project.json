@@ -1,0 +1,23 @@
+{
+  "root": "libs/navigation/ui",
+  "sourceRoot": "libs/navigation/ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/navigation/ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/navigation/ui"],
+      "options": {
+        "jestConfig": "libs/navigation/ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

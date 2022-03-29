@@ -3,7 +3,7 @@ import { faFeatherAlt } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 
 import { AvatarPhoto, Link, NavLink, Button } from '@quacker/ui';
-import { useAuth } from 'src/utils/auth';
+import { useAuth } from '@quacker/auth/context-ui';
 import { route } from '@quacker/navigation/utility';
 
 export type TopNavigationProps = Record<string, never>;
