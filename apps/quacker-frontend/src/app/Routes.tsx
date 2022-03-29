@@ -1,12 +1,11 @@
 import { Route, Switch } from 'react-router-dom';
 
 import { route } from '@quacker/navigation/utility';
+import { PageNotFound } from '@quacker/navigation/ui';
+import { SignInPage, SignUpPage } from '@quacker/auth/feature';
 
 import { AboutPage } from 'src/pages/AboutPage';
 import { HomePage } from 'src/pages/HomePage';
-import { PageNotFound } from 'src/pages/PageNotFound';
-import { SignInPage } from 'src/pages/SignInPage';
-import { SignUpPage } from 'src/pages/SignUpPage';
 import { UserDetailPage } from 'src/pages/UserDetailPage';
 
 export function Routes() {

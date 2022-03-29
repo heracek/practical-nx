@@ -3,38 +3,51 @@ import { Form, Formik } from 'formik';
 import type { FormikConfig } from 'formik';
 import * as yup from 'yup';
 
-import { ErrorBanner, LoadingButton, FormikField } from '@quacker/ui';
+import { ErrorBanner, FormikField, LoadingButton } from '@quacker/ui';
 
 const initialValues = {
   email: '',
+  name: '',
   password: '',
+  passwordConfirmation: '',
+  userName: '',
 };
 
 const schema = yup.object().shape({
   email: yup.string().email().required().label('Email'),
+  name: yup.string().required().label('Name'),
   password: yup.string().required().label('Password'),
+  passwordConfirmation: yup
+    .string()
+    .required()
+    .oneOf([yup.ref('password'), null], 'Passwords must match')
+    .label('Password Confirmation'),
+  userName: yup.string().required().label('Username'),
 });
 
-export type SignInFormValue = {
+export type SignUpFormValue = {
   email: string;
+  name: string;
   password: string;
+  passwordConfirmation: string;
+  userName: string;
 };
 
-export type SignInFormProps = {
+export type SignUpFormProps = {
   isLoading?: boolean;
   errorMessage?: string | null;
   className?: string;
-  onSubmit: FormikConfig<SignInFormValue>['onSubmit'];
-  children: ReactNode;
+  onSubmit: FormikConfig<SignUpFormValue>['onSubmit'];
+  children?: ReactNode;
 };
 
-export function SignInForm({
+export function SignUpForm({
   isLoading,
   errorMessage,
   className,
   onSubmit,
   children,
-}: SignInFormProps) {
+}: SignUpFormProps) {
   return (
     <Formik
       onSubmit={onSubmit}
@@ -45,12 +58,30 @@ export function SignInForm({
       <Form className={className}>
         {errorMessage && <ErrorBanner title={errorMessage} className="mb3" />}
         <FormikField
+          id="name"
+          name="name"
+          label="Name"
+          type="text"
+          autoFocus
+          autoComplete="on"
+          autoCorrect="off"
+          autoCapitalize="off"
+        />
+        <FormikField
+          id="userName"
+          name="userName"
+          label="Username"
+          type="text"
+          autoComplete="on"
+          autoCorrect="off"
+          autoCapitalize="off"
+        />
+        <FormikField
           id="email"
           name="email"
           label="Email"
-          type="email"
+          type="text"
           placeholder="e.g. john@doe.com"
-          autoFocus
           autoComplete="on"
           autoCorrect="off"
           autoCapitalize="off"
@@ -64,8 +95,17 @@ export function SignInForm({
           autoCorrect="off"
           autoCapitalize="off"
         />
+        <FormikField
+          id="passwordConfirmation"
+          name="passwordConfirmation"
+          label="Password Confirmation"
+          type="password"
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+        />
         <LoadingButton type="submit" className="mt2 mb3" loading={isLoading}>
-          Sign In
+          Sign Up
         </LoadingButton>
         {children}
       </Form>

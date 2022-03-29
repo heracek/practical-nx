@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { gql, useMutation, useQuery } from '@apollo/client';
 
-import { UserDetailTemplate } from 'src/templates/UserDetailTemplate';
-import { PageNotFound } from './PageNotFound';
+import { PageNotFound } from '@quacker/navigation/ui';
 import { useAuth } from '@quacker/auth/context-ui';
+
+import { UserDetailTemplate } from 'src/templates/UserDetailTemplate';
 
 const USER_DETAIL_QUERY = gql`
   query UserDetail($userName: String!) {
