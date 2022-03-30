@@ -9,6 +9,8 @@
     "../../node_modules/@nrwl/react/typings/image.d.ts"
   ],
   "exclude": [
+    "**/__tests__/**.ts",
+    "**/__tests__/**.tsx",
     "**/*.spec.ts",
     "**/*.test.ts",
     "**/*.spec.tsx",
