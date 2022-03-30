@@ -3,6 +3,7 @@
   "projects": {
     "quacker-backend": "apps/quacker-backend",
     "quacker-frontend": "apps/quacker-frontend",
-    "quacker-frontend-e2e": "apps/quacker-frontend-e2e"
+    "quacker-frontend-e2e": "apps/quacker-frontend-e2e",
+    "shared-design-system-ui": "libs/shared/design-system/ui"
   }
 }

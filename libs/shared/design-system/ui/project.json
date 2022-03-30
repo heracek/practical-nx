@@ -1,0 +1,25 @@
+{
+  "root": "libs/shared/design-system/ui",
+  "sourceRoot": "libs/shared/design-system/ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/design-system/ui/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/design-system/ui"],
+      "options": {
+        "jestConfig": "libs/shared/design-system/ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

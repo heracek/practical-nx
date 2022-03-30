@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-import { Button, ErrorBanner, Loading } from 'src/atoms/';
+import { Button, ErrorBanner, Loading } from '@quacker/ui';
 import { Quack } from 'src/molecules/';
 import type { QuackProps } from 'src/molecules/';
 

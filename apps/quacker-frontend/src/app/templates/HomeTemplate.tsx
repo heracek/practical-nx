@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-import { Heading, MainSection } from 'src/atoms/';
+import { Heading, MainSection } from '@quacker/ui';
 import { QuackForm, ReloadButton } from 'src/molecules/';
 import type { QuackFormProps } from 'src/molecules';
 import { QuackList, TopNavigation } from 'src/organisms/';

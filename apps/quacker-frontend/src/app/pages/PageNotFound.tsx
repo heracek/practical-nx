@@ -1,4 +1,4 @@
-import { Link } from 'src/atoms/';
+import { Link } from '@quacker/ui';
 import { Placeholder } from 'src/templates/Placeholder';
 import { route } from 'src/Routes';
 

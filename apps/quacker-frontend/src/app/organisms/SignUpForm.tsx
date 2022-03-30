@@ -3,7 +3,7 @@ import { Form, Formik } from 'formik';
 import type { FormikConfig } from 'formik';
 import * as yup from 'yup';
 
-import { ErrorBanner } from 'src/atoms/ErrorBanner';
+import { ErrorBanner } from '@quacker/ui';
 import { FormikField } from 'src/molecules/FormikField';
 import { LoadingButton } from 'src/molecules/LoadingButton';
 

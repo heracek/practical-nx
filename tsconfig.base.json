@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@quacker/ui": ["libs/shared/design-system/ui/src/index.ts"],
       "src/*": ["apps/quacker-frontend/src/app/*"]
     }
   },

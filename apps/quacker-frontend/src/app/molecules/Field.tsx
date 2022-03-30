@@ -1,5 +1,5 @@
-import { ErrorMessage, Label, TextInput } from 'src/atoms/';
-import type { TextInputProps } from 'src/atoms/';
+import { ErrorMessage, Label, TextInput } from '@quacker/ui';
+import type { TextInputProps } from '@quacker/ui';
 
 type FieldPropsBase = {
   id?: string;
