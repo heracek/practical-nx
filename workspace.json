@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "auth-context-ui": "libs/auth/context-ui",
     "navigation-utility": "libs/navigation/utility",
     "quacker-backend": "apps/quacker-backend",
     "quacker-frontend": "apps/quacker-frontend",

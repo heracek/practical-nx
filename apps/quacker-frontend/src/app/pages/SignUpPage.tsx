@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { gql, useMutation } from '@apollo/client';
 
 import { SignUpTemplate } from 'src/templates/SignUpTemplate';
-import { useAuth } from 'src/utils/auth';
+import { useAuth } from '@quacker/auth/context-ui';
 
 const SIGNUP_MUTATION = gql`
   mutation SignUp(

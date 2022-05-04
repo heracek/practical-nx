@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@quacker/auth/context-ui": ["libs/auth/context-ui/src/index.ts"],
       "@quacker/navigation/utility": ["libs/navigation/utility/src/index.ts"],
       "@quacker/ui": ["libs/shared/design-system/ui/src/index.ts"],
       "src/*": ["apps/quacker-frontend/src/app/*"]

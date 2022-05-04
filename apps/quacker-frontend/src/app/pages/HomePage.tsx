@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useMutation, useQuery, gql } from '@apollo/client';
 
 import { HomeTemplate } from 'src/templates/HomeTemplate';
-import { useAuth } from 'src/utils/auth';
+import { useAuth } from '@quacker/auth/context-ui';
 
 const QUACKS_QUERY = gql`
   query Quacks {
