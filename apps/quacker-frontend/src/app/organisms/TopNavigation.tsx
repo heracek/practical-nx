@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import { AvatarPhoto, Link, NavLink, Button } from '@quacker/ui';
 import { useAuth } from 'src/utils/auth';
-import { route } from 'src/Routes';
+import { route } from '@quacker/navigation/utility';
 
 export type TopNavigationProps = {};
 

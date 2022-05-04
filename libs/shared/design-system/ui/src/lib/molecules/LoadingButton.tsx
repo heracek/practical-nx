@@ -1,5 +1,5 @@
-import { Button, Spinner } from '@quacker/ui';
-import type { ButtonProps } from '@quacker/ui';
+import { Button, Spinner } from '../atoms';
+import type { ButtonProps } from '../atoms';
 
 export type LoadingButtonProps = {
   loading?: boolean;

@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { TransparentButton } from '@quacker/ui';
-import type { TransparentButtonProps } from '@quacker/ui';
+import { TransparentButton } from '../atoms';
+import type { TransparentButtonProps } from '../atoms';
 
 export type ReloadButtonProps = {
   isLoading?: boolean;
