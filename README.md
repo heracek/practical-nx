@@ -1,6 +1,6 @@
 # Quacker
 
-## Presentation PDF [here](./Practical-Nx-presentation.pdf)
+## Presentation PDF [part 1](./Practical-Nx-presentation.pdf) and [part 2](./Practical-Nx-presentation-part2.pdf)
 
 ---
 
