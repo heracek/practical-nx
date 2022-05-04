@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import { gql, useMutation } from '@apollo/client';
 
-import { SignInTemplate } from 'src/templates/SignInTemplate';
+import { SignInTemplate } from '@quacker/auth/ui';
 import { useAuth } from '@quacker/auth/context-ui';
 
 const SIGNIN_MUTATION = gql`

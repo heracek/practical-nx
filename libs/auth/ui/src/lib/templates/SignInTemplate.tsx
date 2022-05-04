@@ -1,8 +1,9 @@
 import { Heading, Link, MainSection } from '@quacker/ui';
 import { TopNavigation } from '@quacker/navigation/ui';
-import { SignInForm } from 'src/organisms/';
-import type { SignInFormProps } from 'src/organisms/';
 import { route } from '@quacker/navigation/utility';
+
+import { SignInForm } from '../organisms';
+import type { SignInFormProps } from '../organisms';
 
 export type SignInTemplateProps = {
   isLoading?: boolean;
