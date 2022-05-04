@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { SignInForm } from '../SignInForm';
+import { SignInForm } from './SignInForm';
 
 describe('SignInForm', () => {
   it('calls `handleSubmit` on success', async () => {

@@ -25,7 +25,7 @@ export type SignInFormProps = {
   errorMessage?: string | null;
   className?: string;
   onSubmit: FormikConfig<SignInFormValue>['onSubmit'];
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export function SignInForm({
