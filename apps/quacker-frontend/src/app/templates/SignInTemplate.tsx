@@ -1,5 +1,6 @@
 import { Heading, Link, MainSection } from '@quacker/ui';
-import { SignInForm, TopNavigation } from 'src/organisms/';
+import { TopNavigation } from '@quacker/navigation/ui';
+import { SignInForm } from 'src/organisms/';
 import type { SignInFormProps } from 'src/organisms/';
 import { route } from '@quacker/navigation/utility';
 
