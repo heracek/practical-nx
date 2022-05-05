@@ -2,7 +2,7 @@
   "root": "libs/auth/feature",
   "sourceRoot": "libs/auth/feature/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["type:feature"],
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",

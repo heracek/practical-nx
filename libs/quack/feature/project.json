@@ -2,7 +2,7 @@
   "root": "libs/quack/feature",
   "sourceRoot": "libs/quack/feature/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["type:feature"],
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",

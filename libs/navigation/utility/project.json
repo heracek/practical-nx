@@ -2,7 +2,7 @@
   "root": "libs/navigation/utility",
   "sourceRoot": "libs/navigation/utility/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["type:util"],
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
